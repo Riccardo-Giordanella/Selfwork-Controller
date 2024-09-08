@@ -16,13 +16,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{{route('homepage')}}">Home</a>
+          <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{route('servizi')}}">Servizi</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{route('chi.siamo')}}">Chi Siamo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('articoli')}}">Articoli</a>
         </li>
       </ul>
     </div>

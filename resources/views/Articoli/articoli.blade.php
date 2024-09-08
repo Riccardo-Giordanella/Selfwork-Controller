@@ -33,24 +33,25 @@
   </div>
 </nav>
     <header>
-      <h1 class="text-center my-5">Chi Siamo</h1>
+      <h1 class="text-center my-5">I nostri articoli</h1>
     </header>
 
     <main>
       <div class="container">
         <div class="row">
-          @foreach ($creators as $creator)
-            <div class="col-12 col-md-4 d-flex justify-content-evenly">
-              <div class="card card-custom">
-                <img src="https://picsum.photos/200" class="card-img-top" alt="Immagine del creatore">
-                <div class="card-body">
-                  <h5 class="card-title">{{$creator['name']}} {{$creator['surname']}}</h5>
-                  <p class="card-text">{{$creator['description']}}</p>
-                  <a href="{{route('dettaglio', ['name'=> $creator['name']])}}" class="btn btn-primary">Vai al dettaglio</a>
+            @foreach ($articles as $article)
+                <div class="col-12 col-md-4 d-flex justify-content-evenly">
+                    <div class="card card-custom">
+                        <img src="https://picsum.photos/200" class="card-img-top" alt="Immagine del creatore">
+                        <div class="card-body">
+                            <h5 class="card-title">{{$article['name']}}</h5>
+                            <p class="card-text">{{$article['description']}}</p>
+                            <p class="card-text">{{$article['price']}}€</p>
+                            <a href="#" class="btn btn-primary">Acquista</a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          @endforeach
+            @endforeach
         </div>
       </div>
     </main>
